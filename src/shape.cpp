@@ -42,5 +42,23 @@ public:
     }
 };
 
+// Factory class
+class ShapeFactory {
+public:
+    enum ShapeType { CIRCLE, TRIANGLE, SQUARE };
+
+    static std::unique_ptr<Shape> createShape(ShapeType type, double a, double b = 0) {
+        switch (type) {
+            case CIRCLE:
+                return std::make_unique<Circle>(a);
+            case TRIANGLE:
+                return std::make_unique<Triangle>(a, b);
+            case SQUARE:
+                return std::make_unique<Square>(a);
+            default:
+                throw std::invalid_argument("Invalid ShapeType");
+        }
+    }
+};
 
 #endif // SHAPES_H
