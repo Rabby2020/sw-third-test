@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/student.dir/src/shape.cpp.o CMakeFiles/student.dir/test/test.cpp.o -o student  /root/googletest/build/lib/libgtest.a /root/googletest/build/lib/libgtest_main.a 
